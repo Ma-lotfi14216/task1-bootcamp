@@ -1,0 +1,151 @@
+/* Resets */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* list-style: none; */
+}
+
+/* Root variables */
+:root {
+  --color-primary: #234894;
+  --color-primary-light: #afcedd;
+  --color-secondary: #219f95;
+  --color-gray: #696969;
+  --color-white: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* USER */
+.user {
+  max-width: 400px;
+  height: auto;
+
+  /* border: 1px solid; */
+}
+h1 {
+  margin: 2rem;
+  font-size: 1.8rem;
+}
+
+.user__documents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.user__documents-id {
+  padding: 0.5rem;
+  background-color: var(--color-primary-light);
+  width: 40px;
+  height: 35px;
+  border-radius: 6px;
+  text-align: center;
+  color: var(--color-primary);
+}
+.user__documents-apload {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
+}
+.user__documents-creatAt {
+  flex: 1;
+  direction: ltr;
+  color: var(--color-gray);
+  font-size: 1.2rem;
+}
+
+.user__id {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+}
+.user__id span {
+  color: var(--color-gray);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.user__request {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.user__request-profile {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+.user__request-img {
+  border-radius: 6px;
+}
+.user__request .btn {
+  color: white;
+  outline: 0;
+  background-color: var(--color-secondary);
+  border: none;
+  padding: 2rem;
+  border-radius: 6px;
+  /* margin-right: 12rem; */
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .user {
+    font-size: 1.6rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .user__id {
+    font-size: 1.6rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .user {
+    font-size: 1.8rem;
+  }
+  .user__request .btn {
+    margin-right: 4rem;
+  }
+  h1 {
+    font-size: 2.2rem;
+  }
+  .user__id {
+    font-size: 1.8rem;
+  }
+}
+
+.users {
+  margin: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .users {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .users {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
